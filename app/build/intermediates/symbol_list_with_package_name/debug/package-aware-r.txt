@@ -704,6 +704,7 @@ id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
+id filmTitle
 id forever
 id gone
 id group_divider
@@ -721,8 +722,8 @@ id left
 id line1
 id line3
 id listMode
-id listView
 id list_item
+id list_view
 id message
 id middle
 id multiply
