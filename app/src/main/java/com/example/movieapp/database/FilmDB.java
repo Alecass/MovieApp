@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 
 public class FilmDB extends SQLiteOpenHelper {
 
-
     private static final String DB_NAME = "films.db";
     private static final int VERSION = 1;
 
