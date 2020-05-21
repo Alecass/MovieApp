@@ -19,23 +19,6 @@ public class FilmDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(FilmTableHelper.CREATE);
-
-        for(int i=0; i <100;i++ ){
-            ContentValues vValues = new ContentValues();
-
-            String title = "title" + i;
-            vValues.put(FilmTableHelper.TITLE,title);
-
-            String imagePath = "path" + i;
-            vValues.put(FilmTableHelper.IMAGE_PATH,imagePath);
-
-            String description = "description" + i;
-            vValues.put(FilmTableHelper.DESCRIPTION,description);
-
-            vValues.put(FilmTableHelper.IS_FAVOURITE,1);
-
-            db.insert(FilmTableHelper.TABLE_NAME, null,vValues);
-        }
     }
 
     @Override
