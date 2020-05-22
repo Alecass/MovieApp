@@ -9,6 +9,7 @@ import androidx.loader.content.Loader;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -19,7 +20,6 @@ import android.widget.Toast;
 
 import com.example.movieapp.R;
 import com.example.movieapp.adapters.FilmAdapter;
-import com.example.movieapp.api.JsonFilmsApi;
 import com.example.movieapp.database.FilmDB;
 import com.example.movieapp.database.FilmProvider;
 import com.example.movieapp.database.FilmTableHelper;
@@ -65,37 +65,38 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         locale = getResources().getConfiguration().locale;
 
         filmList = findViewById(R.id.filmGrid);
-        filmAdapter = new FilmAdapter(this,null);
+        filmAdapter = new FilmAdapter(this, null);
         filmList.setAdapter(filmAdapter);
         getSupportLoaderManager().initLoader(MY_ID, null, this);
         //retrieve data from the server using retrofit
         //getFilms();
         apiService = ApiService.getInstance();
-
-        ApiListener apiListener = new ApiListener(){
+        filmDB = new FilmDB(this);
+        database = filmDB.getReadableDatabase();
+        ApiListener apiListener = new ApiListener() {
             @Override
             public void onFilmsLoaded(boolean success, ApiResponse apiResponse, int errorCode, String errorMessage) {
                 if (success) {
                     films = apiResponse.getFilms();
 
+
                     ContentValues values = new ContentValues();
                     for (Film film : films) {
-                        values.put(FilmTableHelper.TITLE, film.getTitle());
-
-                        getContentResolver().insert(FilmProvider.FILMS_URI, values);
-                    }}
+                        //check if film already exist or not
+                        Cursor c=database.rawQuery("SELECT * FROM films WHERE image_path='"+film.getImagePath()+"'", null);
+                        if(! c.moveToFirst()){
+                            c.close();
+                            values.put(FilmTableHelper.TITLE, film.getTitle());
+                            values.put(FilmTableHelper.IMAGE_PATH, film.getImagePath());
+                            values.put(FilmTableHelper.DESCRIPTION, film.getDescription());
+                            getContentResolver().insert(FilmProvider.FILMS_URI, values);
+                        }
+                    }
+                    filmAdapter.notifyDataSetChanged();
+                }
             }
         };
-
         apiService.getMovies(apiListener);
-    }
-
-
-    private void insertFilm(){
-        ContentValues values = new ContentValues();
-        values.put(FilmTableHelper.TITLE,"film1");
-        Uri filmUri = getContentResolver().insert(FilmProvider.FILMS_URI,values);
-        Toast.makeText(this, "Created Contact " + "film1", Toast.LENGTH_LONG).show();
     }
 
     private void deleteAll(){

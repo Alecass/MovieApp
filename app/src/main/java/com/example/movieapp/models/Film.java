@@ -1,9 +1,17 @@
 package com.example.movieapp.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Film {
+    @SerializedName("title")
     private String title;
+
+    @SerializedName("poster_path")
     private String imagePath;
+
+    @SerializedName("overview")
     private String description;
+
     private Boolean isFavourite;
 
     public Film(String title, String imagePath, String description, Boolean isFavourite) {

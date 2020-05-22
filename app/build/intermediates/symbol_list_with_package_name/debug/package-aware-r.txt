@@ -144,7 +144,9 @@ attr fontProviderQuery
 attr fontStyle
 attr fontVariationSettings
 attr fontWeight
+attr freezesAnimation
 attr gapBetweenBars
+attr gifSource
 attr goIcon
 attr height
 attr hideOnContentScroll
@@ -158,6 +160,7 @@ attr imageButtonStyle
 attr indeterminateProgressStyle
 attr initialActivityCount
 attr isLightTheme
+attr isOpaque
 attr itemPadding
 attr keylines
 attr lastBaselineToBottomHeight
@@ -232,6 +235,7 @@ attr listPreferredItemPaddingLeft
 attr listPreferredItemPaddingRight
 attr logo
 attr logoDescription
+attr loopCount
 attr maxButtonHeight
 attr measureWithLargestChild
 attr multiChoiceItemLayout
@@ -706,7 +710,6 @@ id fill_horizontal
 id fill_vertical
 id filmGrid
 id filmImage
-id filmTitle
 id forever
 id glide_custom_view_target_tag
 id gone
@@ -1257,6 +1260,8 @@ styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_a
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
+styleable GifTextureView gifSource isOpaque
+styleable GifView freezesAnimation loopCount
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LinearConstraintLayout android_orientation

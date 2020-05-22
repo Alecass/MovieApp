@@ -30,8 +30,6 @@ public class FilmProvider extends ContentProvider {
         uriMatcher.addURI(AUTORITY, BASE_PATH_FILMS + "/#", SINGLE_FILM);
     }
 
-
-
     @Override
     public boolean onCreate() {
         database = new FilmDB(getContext());
