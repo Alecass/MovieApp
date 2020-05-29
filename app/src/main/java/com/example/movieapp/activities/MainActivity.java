@@ -3,6 +3,7 @@ package com.example.movieapp.activities;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
@@ -10,11 +11,15 @@ import androidx.loader.content.Loader;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -23,6 +28,8 @@ import com.example.movieapp.adapters.FilmAdapter;
 import com.example.movieapp.database.FilmDB;
 import com.example.movieapp.database.FilmProvider;
 import com.example.movieapp.database.FilmTableHelper;
+import com.example.movieapp.fragments.ConfirmDialogFragment;
+import com.example.movieapp.fragments.ConfirmDialogFragmentListener;
 import com.example.movieapp.models.ApiResponse;
 import com.example.movieapp.models.Film;
 import com.example.movieapp.services.ApiListener;
@@ -38,7 +45,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>, ConfirmDialogFragmentListener {
 
     private static final int MY_ID = 1;
 
@@ -73,13 +80,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         apiService = ApiService.getInstance();
         filmDB = new FilmDB(this);
         database = filmDB.getReadableDatabase();
+
         ApiListener apiListener = new ApiListener() {
             @Override
             public void onFilmsLoaded(boolean success, ApiResponse apiResponse, int errorCode, String errorMessage) {
                 if (success) {
                     films = apiResponse.getFilms();
-
-
                     ContentValues values = new ContentValues();
                     for (Film film : films) {
                         //check if film already exist or not
@@ -97,8 +103,36 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             }
         };
         apiService.getMovies(apiListener);
+
+
+        filmList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+                intent.putExtra("id",id);
+                startActivity(intent);
+            }
+        });
+
+        filmList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                ConfirmDialogFragment dialogFragment = new ConfirmDialogFragment(getString(R.string.add_to_favourite_title),
+                        getString(R.string.add_to_favourite_message),
+                        id);
+                dialogFragment.show(fragmentManager, ConfirmDialogFragment.class.getName());
+                return true;
+            }
+        });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+        return true;
+    }
     private void deleteAll(){
         getContentResolver().delete(FilmProvider.FILMS_URI,null,null);
     }
@@ -118,5 +152,34 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
         filmAdapter.changeCursor(null);
+    }
+
+
+    @Override
+    public void onPositivePressed(long id) {
+        if (id > 0) {
+            String whereClause = FilmTableHelper._ID + "=?";
+            String[] whereArgs = new String[]{String.valueOf(id)};
+
+            ContentValues values = new ContentValues();
+            values.put(FilmTableHelper.IS_FAVOURITE, true);
+
+            int favourite = database.update(tableName, values, whereClause, whereArgs);
+
+            if (favourite > 0) {
+                Intent intent = new Intent(MainActivity.this,FavoriteActivity.class);
+                startActivity(intent);
+
+                Toast.makeText(MainActivity.this,"added to favorite", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(MainActivity.this, "something went wrong", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+    }
+
+    @Override
+    public void onNegativePressed() {
+
     }
 }

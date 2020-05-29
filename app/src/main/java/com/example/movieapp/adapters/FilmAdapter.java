@@ -21,7 +21,6 @@ public class FilmAdapter extends CursorAdapter {
         super(context, c);
     }
 
-
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         LayoutInflater vInflater = LayoutInflater.from(context);

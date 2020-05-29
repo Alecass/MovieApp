@@ -1,13 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.18] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/ad613d534be70c2d1347ca725299f5cf/jetified-android-gif-drawable-1.2.18/AndroidManifest.xml:2:1-9:12
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.19] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/a57be03868417e5ca43e25bb0534a97e/jetified-android-gif-drawable-1.2.19/AndroidManifest.xml:2:1-9:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/95e8d6401b4c9ba9dc0f8d4da1cee10d/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/0d47a0d6fa5764cd649078b15eaac482/appcompat-1.0.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/380cbbd0623e9b22e21961fc6ec82b14/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [pl.droidsonroids:relinker:1.3.1] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/14eb3bf3a35e69f8f91a25854d8a72b9/jetified-relinker-1.3.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/580909971398bf855d9ca413681ec168/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.fragment:fragment:1.0.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/560559a1d2f072346120a8facd149d09/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -36,29 +37,29 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/AlessioCass/.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/9c0d2720907bb8bd5d5976efee735314/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/d00c90699ae27cc1e1ce5e4b3e530617/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/13ac386f95e101744ae5f7d486caaa8c/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:5:5-22:19
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:7:5-27:19
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/95e8d6401b4c9ba9dc0f8d4da1cee10d/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/95e8d6401b4c9ba9dc0f8d4da1cee10d/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/380cbbd0623e9b22e21961fc6ec82b14/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -72,49 +73,59 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/Ales
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/032360533aed7f4773dde0d69318c0bd/core-1.0.1/AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:13:9-40
+activity#com.example.movieapp.activities.FavoriteActivity
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:14:9-74
+	android:name
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:14:19-62
+activity#com.example.movieapp.activities.DetailActivity
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:15:9-63
+	android:name
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:15:19-60
 activity#com.example.movieapp.activities.MainActivity
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:12:19-58
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:16:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:20:27-74
 provider#com.example.movieapp.database.FilmProvider
-ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:19:9-21:52
+ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:24:9-26:83
 	android:authorities
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:20:13-80
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:26:13-80
 	android:name
-		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:21:13-50
+		ADDED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml:25:13-50
 uses-sdk
 INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
 INJECTED from /Users/AlessioCass/Documents/AndroidStudio/MovieApp/app/src/main/AndroidManifest.xml
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.18] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/ad613d534be70c2d1347ca725299f5cf/jetified-android-gif-drawable-1.2.18/AndroidManifest.xml:5:5-7:41
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.18] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/ad613d534be70c2d1347ca725299f5cf/jetified-android-gif-drawable-1.2.18/AndroidManifest.xml:5:5-7:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.19] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/a57be03868417e5ca43e25bb0534a97e/jetified-android-gif-drawable-1.2.19/AndroidManifest.xml:5:5-7:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.19] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/a57be03868417e5ca43e25bb0534a97e/jetified-android-gif-drawable-1.2.19/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/95e8d6401b4c9ba9dc0f8d4da1cee10d/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/95e8d6401b4c9ba9dc0f8d4da1cee10d/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/0d47a0d6fa5764cd649078b15eaac482/appcompat-1.0.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/0d47a0d6fa5764cd649078b15eaac482/appcompat-1.0.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/380cbbd0623e9b22e21961fc6ec82b14/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/380cbbd0623e9b22e21961fc6ec82b14/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/271d0ad8fab014e1b69399f7396f344c/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [pl.droidsonroids:relinker:1.3.1] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/14eb3bf3a35e69f8f91a25854d8a72b9/jetified-relinker-1.3.1/AndroidManifest.xml:5:5-43
 MERGED from [pl.droidsonroids:relinker:1.3.1] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/14eb3bf3a35e69f8f91a25854d8a72b9/jetified-relinker-1.3.1/AndroidManifest.xml:5:5-43
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/AlessioCass/.gradle/caches/transforms-2/files-2.1/580909971398bf855d9ca413681ec168/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
