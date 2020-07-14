@@ -655,6 +655,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable ic_cinema_2
 drawable ic_clapperboard
 drawable ic_favorite
 drawable ic_film
@@ -785,6 +786,8 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
+id ratingBar
+id rating_label
 id right
 id right_icon
 id right_side
@@ -828,6 +831,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView
 id time
 id title
 id titleDividerNoCustom

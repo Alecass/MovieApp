@@ -100,6 +100,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                             values.put(FilmTableHelper.TITLE, film.getTitle());
                             values.put(FilmTableHelper.IMAGE_PATH, film.getImagePath());
                             values.put(FilmTableHelper.DESCRIPTION, film.getDescription());
+                            values.put(FilmTableHelper.RATING, film.getRating());
+
                             getContentResolver().insert(FilmProvider.FILMS_URI, values);
                         }
                     }

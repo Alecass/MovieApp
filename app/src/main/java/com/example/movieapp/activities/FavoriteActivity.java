@@ -3,6 +3,7 @@ package com.example.movieapp.activities;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
@@ -33,7 +34,7 @@ public class FavoriteActivity extends AppCompatActivity implements LoaderManager
 
     FilmAdapter filmAdapter;
     GridView filmList;
-    TextView noFavorite;
+    ConstraintLayout noFavorite;
     private static final int MY_ID = 2;
 
     FilmDB filmDB;
@@ -128,11 +129,11 @@ public class FavoriteActivity extends AppCompatActivity implements LoaderManager
             ContentValues values = new ContentValues();
             values.put(FilmTableHelper.IS_FAVOURITE, false);
 
-
             database.update(tableName, values, whereClause, whereArgs);
             noFavorite.setVisibility(View.VISIBLE);
             getSupportLoaderManager().restartLoader(0, null, this);
         }
+
     }
 
     @Override

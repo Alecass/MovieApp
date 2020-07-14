@@ -12,6 +12,9 @@ public class Film {
     @SerializedName("overview")
     private String description;
 
+    @SerializedName("vote_average")
+    private Float rating;
+
     private Boolean isFavourite;
 
     public Film(String title, String imagePath, String description, Boolean isFavourite) {
@@ -19,6 +22,15 @@ public class Film {
         this.imagePath = imagePath;
         this.description = description;
         this.isFavourite = isFavourite;
+        this.rating = rating;
+    }
+
+    public Float getRating() {
+        return rating;
+    }
+
+    public void setRating(Float rating) {
+        this.rating = rating;
     }
 
     public String getTitle() {

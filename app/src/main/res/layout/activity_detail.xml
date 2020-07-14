@@ -35,12 +35,11 @@
                 android:padding="3dp"
                 app:srcCompat="@drawable/ic_favorite" />
 
-<LinearLayout
-    android:paddingTop="10dp"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    >
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
     <androidx.cardview.widget.CardView
         android:elevation="15dp"
@@ -73,7 +72,7 @@
 
     </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+    </LinearLayout>
 
 
             <TextView
@@ -91,18 +90,46 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_marginRight="15dp"
                 android:id="@+id/detailDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/ubuntu_light"
                 android:text=""
                 android:textSize="24sp" />
 
+            <TextView
+                android:id="@+id/rating_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/ubuntu"
+
+                android:text="Rating:"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:animationResolution="10"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1" />
+
         </LinearLayout>
+
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

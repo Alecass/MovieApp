@@ -6,19 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".activities.FavoriteActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/no_favorites"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ubuntu_bold"
-        android:textSize="30dp"
-        android:padding="15dp"
-        android:textAlignment="center"
-        android:text="@string/no_favourites"
-        app:layout_constraintBottom_toBottomOf="@+id/favoriteFilmGrid"
-        app:layout_constraintEnd_toEndOf="@+id/favoriteFilmGrid"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/favoriteFilmGrid"></TextView>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_cinema_2"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_bold"
+            android:padding="15dp"
+            android:text="@string/no_favourites"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <GridView
         android:id="@+id/favoriteFilmGrid"

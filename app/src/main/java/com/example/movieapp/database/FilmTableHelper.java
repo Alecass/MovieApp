@@ -8,11 +8,13 @@ public class FilmTableHelper implements BaseColumns {
     public static final String IMAGE_PATH = "image_path";
     public static final String DESCRIPTION = "description";
     public static final String IS_FAVOURITE = "is_favourite";
+    public static final String RATING = "rating";
 
     public static final String CREATE = "CREATE TABLE " + TABLE_NAME + " ( " +
             _ID + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
             TITLE + " TEXT , " +
             IMAGE_PATH + " TEXT , " +
             DESCRIPTION + " TEXT , " +
+            RATING + " TEXT , " +
             IS_FAVOURITE + " TEXT ) ;";
 }
