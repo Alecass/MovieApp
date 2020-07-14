@@ -14,5 +14,5 @@ public class FilmTableHelper implements BaseColumns {
             TITLE + " TEXT , " +
             IMAGE_PATH + " TEXT , " +
             DESCRIPTION + " TEXT , " +
-            IS_FAVOURITE + " INTEGER DEFAULT 0 ) ;";
+            IS_FAVOURITE + " TEXT ) ;";
 }

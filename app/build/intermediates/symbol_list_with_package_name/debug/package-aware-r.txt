@@ -11,6 +11,10 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -651,9 +655,12 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable ic_clapperboard
+drawable ic_favorite
 drawable ic_film
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_search_black_24dp
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -668,6 +675,10 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font ubuntu
+font ubuntu_bold
+font ubuntu_light
+font ubuntu_medium
 id ALT
 id CTRL
 id FUNCTION
@@ -697,6 +708,8 @@ id add
 id alertTitle
 id all
 id always
+id app_bar_favorite
+id app_bar_search
 id async
 id barrier
 id beginning
@@ -730,6 +743,7 @@ id end
 id expand_activities_button
 id expanded_menu
 id favoriteFilmGrid
+id favoriteImageBtn
 id fill
 id fill_horizontal
 id fill_vertical
@@ -758,6 +772,7 @@ id message
 id middle
 id multiply
 id never
+id no_favorites
 id none
 id normal
 id notification_background
@@ -777,6 +792,7 @@ id screen
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollView2
 id search_badge
 id search_bar
 id search_button
@@ -803,6 +819,7 @@ id standard
 id start
 id submenuarrow
 id submit_area
+id summaryLabel
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -870,6 +887,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu action_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -916,6 +934,11 @@ string add_to_favourite_message
 string add_to_favourite_success
 string add_to_favourite_title
 string app_name
+string delete_favourite_error
+string delete_favourite_message
+string delete_favourite_success
+string delete_favourite_title
+string no_favourites
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat

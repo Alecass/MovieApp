@@ -6,4 +6,10 @@
     <string name="add_to_favourite_message">Sei sicuro di voler aggiungere questo film ai preferiti?</string>
     <string name="add_to_favourite_success">Aggiunto ai preferiti con successo</string>
     <string name="add_to_favourite_error">Qualcosa è andato storto durante l\'aggiunta ai preferiti</string>
+
+    <string name="delete_favourite_title">Elimina dai Preferiti</string>
+    <string name="delete_favourite_message">Sei sicuro di voler eliminare questo film dai preferiti?</string>
+    <string name="delete_favourite_success">Eliminazione dai film preferiti avvenuta con successo</string>
+    <string name="delete_favourite_error">Qualcosa è andato storto durante l\'eliminazione del film dai preferiti</string>
+    <string name="no_favourites">Add a movie to your favorites to view it here</string>
 </resources>

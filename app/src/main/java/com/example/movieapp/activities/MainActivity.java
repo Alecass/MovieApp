@@ -18,6 +18,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -63,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     List<Film> films;
     ApiService apiService;
+
+    MenuItem appBarFavorite;
+    MenuItem appBarSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,14 +134,29 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_menu, menu);
+
+        appBarFavorite = menu.getItem(1);
+        appBarFavorite.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent favoritePage = new Intent(MainActivity.this,FavoriteActivity.class);
+                startActivity(favoritePage);
+                return false;
+            }
+        });
+
+        appBarSearch = menu.getItem(0);
+        appBarSearch.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                return true;
+            }
+        });
 
         return true;
-    }
-    private void deleteAll(){
-        getContentResolver().delete(FilmProvider.FILMS_URI,null,null);
-    }
-
+    };
 
     @NonNull
     @Override
@@ -154,10 +174,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         filmAdapter.changeCursor(null);
     }
 
-
     @Override
     public void onPositivePressed(long id) {
+
         if (id > 0) {
+
             String whereClause = FilmTableHelper._ID + "=?";
             String[] whereArgs = new String[]{String.valueOf(id)};
 
@@ -167,12 +188,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             int favourite = database.update(tableName, values, whereClause, whereArgs);
 
             if (favourite > 0) {
-                Intent intent = new Intent(MainActivity.this,FavoriteActivity.class);
-                startActivity(intent);
-
-                Toast.makeText(MainActivity.this,"added to favorite", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,R.string.add_to_favourite_success, Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(MainActivity.this, "something went wrong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.add_to_favourite_error, Toast.LENGTH_SHORT).show();
             }
 
         }
